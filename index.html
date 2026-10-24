@@ -2,10 +2,102 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=TodoList/">
-<title>Redirecting…</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KeithSir Web 專案集</title>
+<meta name="description" content="KeithSir 嘅網頁專案入口：Todo List、銷售儀表板、教育中心課程站、導覽站。">
+<style>
+:root{
+  --bg:#0e1424; --panel:#171f33; --panel2:#1e2841; --line:#2a3550;
+  --ink:#eaf0fb; --muted:#93a1bf; --accent:#4ea1ff; --good:#34d399;
+  --chip:#212c48; --shadow:0 10px 30px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+body{margin:0;background:
+  radial-gradient(1100px 560px at 85% -8%,#182a4d 0,transparent 60%),var(--bg);
+  color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:56px 22px 70px}
+.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.5px;font-size:13px;text-transform:uppercase}
+h1{margin:8px 0 6px;font-size:38px;line-height:1.2;letter-spacing:.3px}
+.lead{color:var(--muted);max-width:640px;font-size:15.5px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));margin-top:34px}
+.card{display:flex;flex-direction:column;gap:12px;background:linear-gradient(180deg,var(--panel),var(--panel2));
+  border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);
+  text-decoration:none;color:inherit;transition:transform .15s,border-color .15s;min-height:190px}
+.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.card .top{display:flex;align-items:center;gap:12px}
+.card .ico{font-size:30px;width:54px;height:54px;border-radius:14px;background:var(--chip);
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.card h2{margin:0;font-size:18px;line-height:1.3}
+.card .sub{color:var(--muted);font-size:13px;margin-top:2px}
+.card .desc{color:var(--muted);font-size:13.5px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--chip);
+  border:1px solid var(--line);color:var(--ink)}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--good)}
+.status .d{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 8px var(--good)}
+.go{margin-top:2px;font-weight:800;color:var(--accent);font-size:14px}
+footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media(max-width:520px){.wrap{padding:34px 14px 50px}h1{font-size:28px}}
+@media print{
+  body{background:#fff;color:#111}
+  .card{box-shadow:none;border:1px solid #ccc;background:#fff;transform:none}
+  *{color:#111!important}
+  .desc,.sub,.tags span,.status{color:#444!important}
+}
+</style>
 </head>
 <body>
-<p><a href="TodoList/">前往 Todo List →</a></p>
+<div class="wrap">
+  <div>
+    <span class="eyebrow">Web 專案集</span>
+    <h1>KeithSir 嘅網頁專案</h1>
+    <p class="lead">呢度係所有 web app 嘅入口。揀一個開，每個專案各自獨當一面、全部上線。</p>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="TodoList/" target="_blank" rel="noopener">
+      <div class="top"><span class="ico">✅</span>
+        <div><h2>Todo List 待辦清單</h2><div class="sub">TodoList/</div></div></div>
+      <p class="desc">自包含待辦清單：新增、刪除、標記完成，內建篩選器、localStorage 持久化、暗色模式。</p>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="status"><span class="d"></span>已上線</span><span class="go">開啟 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="dashboard/" target="_blank" rel="noopener">
+      <div class="top"><span class="ico">📊</span>
+        <div><h2>銷售數據儀表板</h2><div class="sub">dashboard/</div></div></div>
+      <p class="desc">由 Dashboard_Data.xlsx（99 筆交易）生成嘅互動儀表板：KPI、圖表、篩選器、可搜尋明細表。</p>
+      <div class="tags"><span>HTML</span><span>JavaScript</span><span>Excel</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="status"><span class="d"></span>已上線</span><span class="go">開啟 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="johnny/" target="_blank" rel="noopener">
+      <div class="top"><span class="ico">🎓</span>
+        <div><h2>尊尼教育中心課程站</h2><div class="sub">johnny/</div></div></div>
+      <p class="desc">kid-friendly 課程導覽站：頂頁卡片總覽＋每門課獨立一頁。現收錄 4 門課。</p>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="status"><span class="d"></span>已上線</span><span class="go">開啟 →</span>
+      </div>
+    </a>
+
+    <a class="card" href="navigator/" target="_blank" rel="noopener">
+      <div class="top"><span class="ico">🧭</span>
+        <div><h2>Navigator 導覽站</h2><div class="sub">navigator/</div></div></div>
+      <p class="desc">所有 web app 一覽：卡片 + 搜尋 + 分類篩選。新增專案只改 projects.json 一檔。</p>
+      <div class="tags"><span>HTML</span><span>JavaScript</span><span>JSON</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="status"><span class="d"></span>已上線</span><span class="go">開啟 →</span>
+      </div>
+    </a>
+  </div>
+
+  <footer>KeithSir Web 專案集 · 部署於 GitHub Pages（KW75/HermesAgent）· 每個專案各自獨立資料夾</footer>
+</div>
 </body>
 </html>
