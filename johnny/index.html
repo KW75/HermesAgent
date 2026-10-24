@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>尊尼教育中心 — 課程總覽 | Johnny Education Centre</title>
+<meta name="description" content="尊尼教育中心（Johnny Education Centre）兒童課程：AI 探索、Python 啟蒙、創意繪畫、小學全科提升。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-head">
+    <img class="logo" src="images/logo.jpg" alt="尊尼教育中心標誌">
+    <div class="brand">
+      <b>尊尼教育中心</b>
+      <span>Johnny Education Centre</span>
+    </div>
+    <a class="head-cta" href="#courses">睇課程 🎈</a>
+  </header>
+
+  <div class="hero">
+    <div class="deco">📚</div>
+    <div>
+      <h1>學而時習之，輕鬆學得開心 🌟</h1>
+      <p>為 5–9 歲小朋友設計嘅科技、創意與學科課程。揀個課，睇下點樣玩到開心、學到嘢！</p>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="search"><span class="ic">🔍</span>
+      <input type="search" id="q" placeholder="搜尋課程名稱、重點…" aria-label="搜尋課程">
+    </div>
+  </div>
+  <div class="chips" id="chips">
+    <button class="chip on" data-cat="all">全部</button>
+    <button class="chip" data-cat="tech">科技 · 编程</button>
+    <button class="chip" data-cat="art">創意 · 藝術</button>
+    <button class="chip" data-cat="study">學科 · 全科</button>
+  </div>
+  <p class="count" id="count"></p>
+
+  <main id="courses">
+    <div class="grid" id="grid">
+      <!-- AI 小小探索班 -->
+      <button class="card" data-name="AI 小小探索班" data-cat="tech" data-kw="ai 人工智能 探索 認識 創意 互動 快樂 好奇心 思考 5-9" onclick="location.href='courses/ai-explorer.html'">
+        <img src="images/ai-explorer.jpg" alt="AI 小小探索班海報">
+        <div class="body">
+          <span class="badge live">已開班</span>
+          <h3>AI 小小探索班</h3>
+          <div class="tags"><span class="tag-cat">科技 · 编程</span><span class="tag-age">5–9 歲</span></div>
+          <p class="desc">一起探索 AI 的奇妙世界！認識 AI、啟發創意、互動學習、快樂成長，激發好奇心、培養思考力。</p>
+          <span class="go">睇詳情 →</span>
+        </div>
+      </button>
+
+      <!-- 兒童 Python 啟蒙班 -->
+      <button class="card" data-name="兒童 Python 啟蒙班" data-cat="tech" data-kw="python 编程 编程 区块 编程 小專案 邏輯 启蒙" onclick="location.href='courses/python.html'">
+        <img src="images/python.jpg" alt="兒童 Python 啟蒙班海報">
+        <div class="body">
+          <span class="badge live">已開班</span>
+          <h3>兒童 Python 啟蒙班</h3>
+          <div class="tags"><span class="tag-cat">科技 · 编程</span><span class="tag-age">年齡 待補充</span></div>
+          <p class="desc">玩着學，邁出编程第一步：Python 入門、區塊编程、小專案同邏輯思考。</p>
+          <span class="go">睇詳情 →</span>
+        </div>
+      </button>
+
+      <!-- 創意繪畫小達人班 -->
+      <button class="card" data-name="創意繪畫小達人班" data-cat="art" data-kw="繪畫 美术 色彩 创作 表达 彩虹 小房子 绘画" onclick="location.href='courses/painting.html'">
+        <img src="images/painting.jpg" alt="創意繪畫小達人班海報">
+        <div class="body">
+          <span class="badge live">已開班</span>
+          <h3>創意繪畫小達人班</h3>
+          <div class="tags"><span class="tag-cat">創意 · 藝術</span><span class="tag-age">年齡 待補充</span></div>
+          <p class="desc">用色彩畫出你的小世界：色彩創作、繪畫技法、表達自我、動手實踐。</p>
+          <span class="go">睇詳情 →</span>
+        </div>
+      </button>
+
+      <!-- 小學全科提升班 -->
+      <button class="card" data-name="小學全科提升班" data-cat="study" data-kw="中文 英語 英文 數學 作业 辅导 提升 全科 小学生的" onclick="location.href='courses/primary.html'">
+        <img src="images/primary.jpg" alt="小學全科提升班海報">
+        <div class="body">
+          <span class="badge live">已開班</span>
+          <h3>小學全科提升班</h3>
+          <div class="tags"><span class="tag-cat">學科 · 全科</span><span class="tag-age">年級 待補充</span></div>
+          <p class="desc">中、英、數全科同步提升：中文、英語、數學同作業輔導，鞏固基數。</p>
+          <span class="go">睇詳情 →</span>
+        </div>
+      </button>
+    </div>
+    <div class="empty" id="empty" hidden>
+      <div class="big">🔍</div>
+      <div>搵唔到符合嘅課程，試吓換個字或重設篩選。</div>
+      <button class="head-cta" style="margin-top:14px;background:var(--blue)" onclick="resetFilters()">重設</button>
+    </div>
+  </main>
+
+  <footer>© 尊尼教育中心 Johnny Education Centre · 課程資料以各課程頁為準</footer>
+</div>
+
+<script>
+const q = document.getElementById('q');
+let cat = 'all';
+function apply(){
+  const term = q.value.trim().toLowerCase();
+  const cards = [...document.querySelectorAll('.card')];
+  let shown = 0;
+  cards.forEach(c=>{
+    const okCat = cat==='all' || c.dataset.cat===cat;
+    const hay = (c.dataset.name + ' ' + c.dataset.kw).toLowerCase();
+    const ok = okCat && (!term || hay.includes(term));
+    c.style.display = ok ? '' : 'none';
+    if(ok) shown++;
+  });
+  document.getElementById('count').innerHTML = `共 <b>${cards.length}</b> 個課程` + (shown!==cards.length ? `，目前顯示 <b>${shown}</b>`:'');
+  document.getElementById('empty').hidden = shown>0;
+}
+function resetFilters(){cat='all';q.value='';document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.dataset.cat==='all'));apply();}
+document.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{
+  cat=ch.dataset.cat;
+  document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===ch));
+  apply();
+});
+q.oninput=apply; apply();
+</script>
+</body>
+</html>
