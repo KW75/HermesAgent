@@ -23,8 +23,8 @@
       "name": "銷售數據儀表板",
       "description": "由 Dashboard_Data.xlsx（99 筆交易）生成的互動式儀表板：KPI、圖表、篩選器與可搜尋明細表，單一自包含 HTML。",
       "stack": ["HTML", "CSS", "JavaScript", "Excel"],
-      "status": "dev",
-      "url": "",
+      "status": "live",
+      "url": "https://kw75.github.io/HermesAgent/navigator/dashboard.html",
       "categories": ["analytics"]
     }
   ]
