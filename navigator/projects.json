@@ -1,0 +1,31 @@
+{
+  "categoryLabels": {
+    "utility": "效率工具",
+    "analytics": "數據分析",
+    "landing": "落地頁",
+    "api": "API 服務"
+  },
+  "statusLabels": {
+    "live": "已上線",
+    "dev": "開發中",
+    "archived": "已歸檔"
+  },
+  "projects": [
+    {
+      "name": "Todo List 待辦清單",
+      "description": "單一 HTML 自包含待辦清單：新增、刪除、標記完成，內建篩選器與 localStorage 持久化，支援暗色模式。",
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "status": "live",
+      "url": "https://kw75.github.io/HermesAgent/",
+      "categories": ["utility"]
+    },
+    {
+      "name": "銷售數據儀表板",
+      "description": "由 Dashboard_Data.xlsx（99 筆交易）生成的互動式儀表板：KPI、圖表、篩選器與可搜尋明細表，單一自包含 HTML。",
+      "stack": ["HTML", "CSS", "JavaScript", "Excel"],
+      "status": "dev",
+      "url": "",
+      "categories": ["analytics"]
+    }
+  ]
+}
