@@ -3,7 +3,8 @@
     "utility": "效率工具",
     "analytics": "數據分析",
     "landing": "落地頁",
-    "api": "API 服務"
+    "api": "API 服務",
+    "education": "教育中心"
   },
   "statusLabels": {
     "live": "已上線",
@@ -14,18 +15,45 @@
     {
       "name": "Todo List 待辦清單",
       "description": "單一 HTML 自包含待辦清單：新增、刪除、標記完成，內建篩選器與 localStorage 持久化，支援暗色模式。",
-      "stack": ["HTML", "CSS", "JavaScript"],
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "status": "live",
       "url": "https://kw75.github.io/HermesAgent/",
-      "categories": ["utility"]
+      "categories": [
+        "utility"
+      ]
     },
     {
       "name": "銷售數據儀表板",
       "description": "由 Dashboard_Data.xlsx（99 筆交易）生成的互動式儀表板：KPI、圖表、篩選器與可搜尋明細表，單一自包含 HTML。",
-      "stack": ["HTML", "CSS", "JavaScript", "Excel"],
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Excel"
+      ],
       "status": "live",
       "url": "https://kw75.github.io/HermesAgent/navigator/dashboard.html",
-      "categories": ["analytics"]
+      "categories": [
+        "analytics"
+      ]
+    },
+    {
+      "name": "尊尼教育中心課程網站",
+      "description": "教育中心課程導覽站：頂頁卡片總覽（可搜尋、分類篩選），每門課獨立一頁，kid-friendly 響應式設計。目前收錄 4 門課：AI 小小探索班、兒童 Python 啟蒙班、創意繪畫小達人班、小學全科提升班。",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "status": "live",
+      "url": "https://kw75.github.io/HermesAgent/johnny/",
+      "categories": [
+        "education"
+      ]
     }
   ]
 }
