@@ -21,7 +21,7 @@
         "JavaScript"
       ],
       "status": "live",
-      "url": "https://kw75.github.io/HermesAgent/TodoList/",
+      "url": "TodoList/",
       "categories": [
         "utility"
       ]
@@ -36,7 +36,7 @@
         "Excel"
       ],
       "status": "live",
-      "url": "https://kw75.github.io/HermesAgent/dashboard/",
+      "url": "dashboard/",
       "categories": [
         "analytics"
       ]
@@ -50,7 +50,7 @@
         "JavaScript"
       ],
       "status": "live",
-      "url": "https://kw75.github.io/HermesAgent/johnny/",
+      "url": "johnny/",
       "categories": [
         "education"
       ]

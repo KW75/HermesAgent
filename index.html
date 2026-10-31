@@ -102,7 +102,7 @@ footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);color:v
     </div>
   </main>
 
-  <footer>KeithSir Web 專案集 · 部署於 GitHub Pages（KW75/HermesAgent）· 每個專案各自獨立資料夾</footer>
+  <footer>KeithSir Web 專案集 · 部署於 GitHub Pages · 每個專案各自獨立資料夾</footer>
 </div>
 
 <script>
@@ -198,7 +198,7 @@ function render(){
     const sLabel = (DATA.statusLabels&&DATA.statusLabels[p.status])||p.status||'未知';
     const sClass = ['live','dev','archived'].includes(p.status)?p.status:'other';
     const ico = (p.categories||[]).map(c=>ICONS[c]).find(Boolean)||'📄';
-    const path = (p.url||'').replace(/^https?:\/\/[^/]+\//,'')||'（無連結）';
+    const path = !p.url ? '（無連結）' : (new URL(p.url, location.href).pathname.replace(/^\/+|\/+$/g,'') || '（根目錄）');
     return `<a class="card" href="${esc(p.url||'#')}" target="_blank" rel="noopener noreferrer"
         ${!p.url?' style="opacity:.6;pointer-events:none"':''}>
       <div class="top"><span class="ico">${ico}</span>
